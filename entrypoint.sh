@@ -1,3 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash
 
-sh -c "Hello, World!"
+python setup.py sdist bdist_wheel --universal
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*

@@ -10,5 +10,7 @@ LABEL "repository"="http://github.com/willbarton/pypi-publish-action"
 LABEL "homepage"="http://github.com/willbarton/pypi-publish-action"
 LABEL "maintainer"="Octocat <octocat@github.com>"
 
+RUN pip install --upgrade setuptools wheel twine
+
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
